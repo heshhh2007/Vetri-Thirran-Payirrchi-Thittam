@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FitBuddy - Generate Plan</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>FitBuddy Generator</h1>
+        <form action="/generate" method="post">
+            <label>Name</label>
+            <input type="text" name="name" required placeholder="John Doe">
+
+            <label>Age</label>
+            <input type="number" name="age" required placeholder="25">
+
+            <label>Fitness Goal</label>
+            <input type="text" name="goal" required placeholder="Muscle Gain / Fat Loss">
+
+            <label>Dietary Preference</label>
+            <input type="text" name="dietary_pref" required placeholder="High Protein / Vegan">
+
+            <button type="submit">Generate Plan</button>
+        </form>
+        <p style="margin-top: 15px;"><a href="/users">View Saved Profiles</a></p>
+    </div>
+</body>
+</html>

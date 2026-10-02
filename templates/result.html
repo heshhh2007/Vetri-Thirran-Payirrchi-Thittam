@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FitBuddy - Plan Details</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Generated Plan for {{ user.name }}</h1>
+        <p><strong>Age:</strong> {{ user.age }} | <strong>Goal:</strong> {{ user.goal }} | <strong>Diet:</strong> {{ user.dietary_pref }}</p>
+        <hr>
+        <div class="output-box">
+            <pre>{{ user.workout_plan }}</pre>
+        </div>
+        <br>
+        <a href="/">← Create New Plan</a> | <a href="/users">All Saved Plans →</a>
+    </div>
+</body>
+</html>

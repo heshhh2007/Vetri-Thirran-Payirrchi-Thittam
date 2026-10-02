@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+venv/
+.env
+fitbuddy.db
+.DS_Stores

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FitBuddy - Saved Users</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>All Saved Fitness Plans</h1>
+        {% if users %}
+            {% for u in users %}
+                <div class="user-item">
+                    <h3>{{ u.name }} (Age: {{ u.age }})</h3>
+                    <p><strong>Goal:</strong> {{ u.goal }} | <strong>Diet:</strong> {{ u.dietary_pref }}</p>
+                    <small>Created: {{ u.created_at.strftime('%Y-%m-%d %H:%M') }}</small>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No plans created yet.</p>
+        {% endif %}
+        <br>
+        <a href="/">← Back to Form</a>
+    </div>
+</body>
+</html>
